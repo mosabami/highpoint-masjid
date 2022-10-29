@@ -31,7 +31,7 @@ export default function HeroBanner(props) {
                       <img
                         className={`${props.data.branding.larger_logo ? "h-32" : "h-16"} w-auto`}
                         src={props.data.branding.logo_url}
-                        alt="hero image"
+                        alt="hero"
                       />
                    
                   </a>
