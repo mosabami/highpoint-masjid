@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 // import "./styles/globals.css"
 // import Head from 'next/head'
 import { Helmet } from 'react-helmet';
@@ -13,9 +13,8 @@ import PrayerTimes from './components/PrayerTimes'
 import Team from './components/Team'
 import mosques from './data/mosques.json'
 import React, { Component } from 'react';
-// import mosques from './data/mosques.yml'
 
-console.log(mosques)
+
 
 // function App({ data }) {
 //   return (

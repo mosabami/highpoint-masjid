@@ -13,6 +13,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.13",
+    "file-system": "^2.2.2",
+    "js-yaml": "^4.1.0",
     "postcss": "^8.4.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -28,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "release": "yaml2json src/data/mosques.yml -s -p && git add . && git commit -m \"updates\" && git push origin main"
   },
   "eslintConfig": {
     "extends": [
