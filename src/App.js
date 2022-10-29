@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 // import "./styles/globals.css"
 // import Head from 'next/head'

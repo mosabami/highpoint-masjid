@@ -6,7 +6,6 @@ export default function Team(props) {
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Meet our team</h2>
 
           <ul
-            role="list"
             className="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"
           >
             {props.data.team.map((person) => (
