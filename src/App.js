@@ -14,7 +14,8 @@ import Team from './components/Team'
 import mosques from './data/mosques.json'
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
-const TRACKING_ID = process.env.REACT_APP_GOOGLE_MEASUREMENT_ID ? process.env.REACT_APP_GOOGLE_MEASUREMENT_ID : false // OUR_TRACKING_ID
+// const TRACKING_ID = process.env.REACT_APP_GOOGLE_MEASUREMENT_ID ? process.env.REACT_APP_GOOGLE_MEASUREMENT_ID : 'G-GCS07570PB' // OUR_TRACKING_ID
+const TRACKING_ID = 'G-GCS07570PB' // OUR_TRACKING_ID
 
 if (TRACKING_ID) {
   ReactGA.initialize(TRACKING_ID)
@@ -47,6 +48,14 @@ class App extends Component {
       <Helmet>
         <title>{this.state.name} - Mosque Website</title>
       </Helmet>
+      {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCS07570PB"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)}
+        gtag('js', new Date());
+
+        gtag('config', {TRACKING_ID});
+      </script> */}
 
       <MosqueBrandingCSS data={this.state} />
       <Navigation data={this.state} onRouteChange={this.onRouteChange} showBanner = {this.state.showBanner} />
