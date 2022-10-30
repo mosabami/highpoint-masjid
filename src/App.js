@@ -19,8 +19,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = mosques
-    this.state.route = 'home'
+    this.state.route = '/home'
+    this.state.showBanner = true
+    
   };
+
+  onRouteChange = (route) => {
+    route === '/home'
+    ? this.setState({ showBanner: true })
+    : this.setState({showBanner: false});
+    this.setState({ route: route });
+    console.log(this.state.route)
+    console.log("new state",this.state.showBanner)
+    // console.log(this.state.showBanner)
+  }
 
   render() {
     // let data = this.state
@@ -32,13 +44,24 @@ class App extends Component {
       </Helmet>
 
       <MosqueBrandingCSS data={this.state} />
-      <Navigation data={this.state} />
-      <PrayerTimes data={this.state} />
-      <About data={this.state} />
-      <ContentSection data={this.state} />
-      <DonationSection data={this.state} />
-      <Team data={this.state} />
-      <Contact data={this.state} />
+      <Navigation data={this.state} onRouteChange={this.onRouteChange} showBanner = {this.state.showBanner} />
+      {
+        this.state.route === '/home'
+        ? 
+        <div>
+          <PrayerTimes data={this.state} />
+          <About data={this.state} />
+          <ContentSection data={this.state.content_sections.home} />
+          <DonationSection data={this.state} />
+          <Team data={this.state} />
+          <Contact data={this.state} />
+        </div>
+        : 
+        <div>
+          <ContentSection data={this.state.content_sections.events} />
+        </div>
+      }
+
     </div>
     );
   }

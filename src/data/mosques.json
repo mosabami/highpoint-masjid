@@ -2,16 +2,35 @@
   "name": "High Point Masjid, West Seattle",
   "description": "CHEACS is local charity that runs religious and social activities as well as education training, well fit sports & recreation. We also hold learning sessions for the children, advisory sessions for the local community.\n",
   "about": "Chadwell Heath Educational and Cultural Society (CHEACS), we are a local registered charity established in 2005 (registration number 1125112) providing religious, educational and social activities for the local community such as sports and recreational activities, educational sessions for children, language classes and events for senior citizens.\n\nEvery six months we hold community events with the wider community and provide food for attendees once a month. Our organization also provides advice surgeries once a week to set an example as great role models, to be of a good character and integrate into the local community.\n\nWe have been serving the local community for the last seventeen years and have grown from strength to strength.\n\nWe are based in Highpoint, 6558 35th Ave SW, Seattle, WA 98126\n",
-  "content_sections": [
-    {
-      "title": "Prayer times",
-      "body": "**Fajr**: 6:15 am\n\n**Zuhr**: 1:30 pm\n\n**Asr**: 4:30 pm\n\n**Maghrib**: 6:50 pm\n\n**Isha**: 8:15 pm\n"
-    },
-    {
-      "title": "Jumma time",
-      "body": "**Khutbah**: 1:30 pm\n\n**Iqamah**: 2:30 pm\n"
-    }
-  ],
+  "content_sections": {
+    "home": [
+      {
+        "title": "Prayer times",
+        "body": "**Fajr**: 6:15 am\n\n**Zuhr**: 1:30 pm\n\n**Asr**: 4:30 pm\n\n**Maghrib**: 6:50 pm\n\n**Isha**: 8:15 pm\n"
+      },
+      {
+        "title": "Jumma time",
+        "body": "**Khutbah**: 1:30 pm\n\n**Iqamah**: 2:30 pm\n"
+      }
+    ],
+    "events": [
+      {
+        "title": "Upcoming events",
+        "image": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/bbq.jpg",
+        "body": "**BBQ event**\n\n**Date**: November 4th 2022\n\nOn November 4th 2022, we will be having this great bbq for our community\n\n**Celebration of something**\n\n**Date**: November 7th 2022\n\nOn November 7th 2022, we will be having another awesome event\n"
+      },
+      {
+        "title": "Frequent events",
+        "body": "**Friday evening prayers**\n\nEvery friday between Maghrib and Ishah we have a prayer event\n",
+        "image": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/mainpublic/events/dhikr.png"
+      },
+      {
+        "title": "Past events",
+        "image": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/eidfitr.jpg",
+        "body": "**Eid Fitr celebration**\n**Date:** May 1st 2022\nWe had a great event on this day\n"
+      }
+    ]
+  },
   "branding": {
     "logo_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/logo512.png",
     "banner_image_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/heropic.png",
