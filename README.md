@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Highpoint Masjid Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It hosts the code used to build the Highpoint Masjid in Highpoint, West Seattle. This website will be used as a templated to build other free mosque websites in the future. It is loosely based on [Mosque Screen's](https://github.com/Mosque-Screens) [Mosque website](https://github.com/Mosque-Screens/mosque.website) but converted to react and having some lifecycle improvments added to make it easy for mosques to host their free website on GitHub Pages.
 
-## Available Scripts
+Some of those improvements include the following:
+1. The addition of GitHub actions pipeline to build and deploy the website to GitHub pages. For more information on that check out [this blog](https://dev.to/achukka/deploy-react-app-using-github-actions-157d) for more information
+1. Conversion of the Next.js app to React
+1. Movement of all data to the data files so user only needs up update the data files for their needs
+1. Addition of a proper nav bar
+1. Addition of an events page
+1. Update data file to support new paradigm
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+First fork the repo by clicking on the fork button at the top right then clone the website (star it too if you like it while you're at it 😉)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+git clone https://github.com/<your username>/highpoint-masjid
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Install the required packages to run it locally
+```bash
+npm install
+```
 
-### `npm test`
+Run it locally to test it out
+```bash
+npm run start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deploy your mosque website
 
-### `npm run build`
+Update the `src\data\mosques.yml` file as required. Each page will require its own entry in content_sections and pages part of the database
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Convert the yml data to json by running
+```bash
+npm run release
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+commit and push your changes to your GitHub repo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please note, you will need to configure your repo to run GH pages by using the instructions in [this blog](https://dev.to/achukka/deploy-react-app-using-github-actions-157d)

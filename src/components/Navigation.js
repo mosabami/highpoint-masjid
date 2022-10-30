@@ -21,7 +21,8 @@ class  Navigation extends Component {
     
   render() {
     return (
-    <div>
+      // https://larainfo.com/blogs/react-responsive-navbar-menu-with-tailwind-css-example
+    <div> 
       <nav className="w-full bg-white shadow">
           <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
               <div>
