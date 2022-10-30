@@ -11,7 +11,7 @@ export default function ContentSection(props) {
             {
               section.image ?
               <img
-              className=""
+              className="hover:opacity-40 transition duration-300 ease-in-out bg-white"
               src={section.image ? section.image : ''}
               alt=""
             />

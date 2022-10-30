@@ -53,7 +53,7 @@ class Navigation extends Component {
                 </div>
                 <div className="xhidden md:block md:ml-10 pr-4 space-x-8">
                   {navigation.map((item) => (
-                    <p key={item.name}   className="font-medium text-gray-500 hover:text-red-900" onClick={() => {
+                    <p key={item.name}   className="text-xl text-black-1400 hover:text-red-900 hover:text-italics" onClick={() => {
                       this.props.onRouteChange(item.href)
                       item.href === '/home'
                       ? this.setState({showBanner:true})
