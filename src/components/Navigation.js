@@ -3,12 +3,9 @@
 import { Component } from "react";
 import HeroBanner  from './HeroBanner'
 import HeroText from './HeroText'
-import Otherbanner from './otherbanner'
+import Otherbanner from './Otherbanner'
 
-const navigation = [
- { name: 'Home', href: '/home' },
- { name: 'Events', href: '/events' },
-]
+
 
 class  Navigation extends Component {
 
@@ -67,7 +64,7 @@ class  Navigation extends Component {
                   >
                       <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
 
-                      {navigation.map((item) => (
+                      {this.state.pages.map((item) => (
 
                     <li className="text-xl text-black-1400 hover:text-red-900 hover:text-italics">
                     <p key={item.name}  onClick={() => {

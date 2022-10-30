@@ -112,3 +112,10 @@ charity_information:
     value: 22 July 2008
   - label: Established in
     value: 2005
+
+pages:
+  - name: 'Home'
+    href: '/home'
+  - name: 'Events'
+    href: '/events'
+
