@@ -1,4 +1,5 @@
 const TRACKING_ID = process.env.REACT_APP_GOOGLE_MEASUREMENT_ID ? process.env.REACT_APP_GOOGLE_MEASUREMENT_ID : 'unknown'
+console.log( TRACKING_ID)
 
 export default function GoogleAnalytics() {
   return (<>
