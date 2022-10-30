@@ -3,7 +3,7 @@
 import { Component } from "react";
 import HeroBanner  from './HeroBanner'
 import HeroText from './HeroText'
-import Otherbanner from './Otherbanner'
+import OtherBanners from './OtherBanners'
 
 
 
@@ -130,7 +130,7 @@ class  Navigation extends Component {
         {
           this.state.showBanner === true
           ?   <HeroBanner data={this.state} />
-          : <Otherbanner data={this.state} />
+          : <OtherBanners data={this.state} />
         }
       </div>  
 

@@ -1,4 +1,4 @@
-export default function Otherbanner (props) {
+export default function OtherBanners (props) {
     return (
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
