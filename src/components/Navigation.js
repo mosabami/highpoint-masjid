@@ -1,8 +1,8 @@
-// import Link from "next/link"
-// import { Link } from 'react-router-dom';
+
+
+import { Component } from "react";
 import HeroBanner  from './HeroBanner'
 import HeroText from './HeroText'
-import { Component } from 'react'
 import Otherbanner from './otherbanner'
 
 const navigation = [
@@ -10,18 +10,84 @@ const navigation = [
  { name: 'Events', href: '/events' },
 ]
 
+class  Navigation extends Component {
 
-class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = this.props.data;
     console.log(this.props.data.showBanner)
     this.state.showBanner= this.props.showBanner;
+    // const [navbar, setNavbar] = useState(false);
     // this.onRouteChange = this.props.onRouteChange
   }
   
+    
   render() {
     return (
+    <div>
+      <nav className="w-full bg-white shadow">
+          <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+              <div>
+                  <div className="flex items-center justify-between py-3 md:py-5 md:block">
+                      <a href="https://mosabami.github.io/highpoint-masjid">
+                      <img
+                          className={`${this.state.branding.larger_logo ? "h-14" : "h-16"} w-auto`}
+                          src={this.state.branding.logo_url}
+                          alt="hero"
+                        />
+                      </a>
+                      <div className="md:hidden">
+                          <button
+                              className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                              onClick={() => console.log("hi")}
+                          >
+                              {(
+                                  <svg
+                                      xmlns="this.state.branding.logo_url"
+                                      className="w-6 h-6"
+                                      viewBox="0 0 20 20"
+                                      fill="currentColor"
+                                  >
+                                      <path
+                                          fillRule="evenodd"
+                                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                          clipRule="evenodd"
+                                      />
+                                  </svg>
+                              ) }
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <div>
+                  <div
+                      className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                         "block" 
+                      }`}
+                  >
+                      <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+
+                      {navigation.map((item) => (
+
+                    <li className="text-xl text-black-1400 hover:text-red-900 hover:text-italics">
+                    <p key={item.name}  onClick={() => {
+                      this.props.onRouteChange(item.href)
+                      item.href === '/home'
+                      ? this.setState({showBanner:true})
+                      : this.setState({showBanner:false}) }}>
+                      {item.name}
+                      </p>
+                    </li>
+
+                  ))}
+
+
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </nav>
+
       <div className="relative bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
@@ -42,26 +108,17 @@ class Navigation extends Component {
                     <a href={this.state.route}>
                   
                         <span className="sr-only">{this.state.name}</span>
-                        <img
+                        {/* <img
                           className={`${this.state.branding.larger_logo ? "h-32" : "h-16"} w-auto`}
                           src={this.state.branding.logo_url}
                           alt="hero"
-                        />
+                        /> */}
                      
                     </a>
                   </div>
                 </div>
                 <div className="xhidden md:block md:ml-10 pr-4 space-x-8">
-                  {navigation.map((item) => (
-                    <p key={item.name}   className="text-xl text-black-1400 hover:text-red-900 hover:text-italics" onClick={() => {
-                      this.props.onRouteChange(item.href)
-                      item.href === '/home'
-                      ? this.setState({showBanner:true})
-                      : this.setState({showBanner:false})
-                      }}>
-                      {item.name}
-                    </p>
-                  ))}
+
                 </div>
               </nav>
             </div>
@@ -78,10 +135,12 @@ class Navigation extends Component {
           ?   <HeroBanner data={this.state} />
           : <Otherbanner data={this.state} />
         }
-      </div>
-    )
-  }
-}
+      </div>  
 
+  </div>    
+  );
+  }
+
+}
 
 export default Navigation
