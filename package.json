@@ -31,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "release": "yaml2json src/data/mosques.yml -s -p && git add . && git commit -m \"updates\" && git push origin main"
+    "release": "yaml2json src/data/mosques.yml -s -p && git add . "
   },
   "eslintConfig": {
     "extends": [
