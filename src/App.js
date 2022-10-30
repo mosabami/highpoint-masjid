@@ -48,14 +48,7 @@ class App extends Component {
       <Helmet>
         <title>{this.state.name} - Mosque Website</title>
       </Helmet>
-      {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCS07570PB"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)}
-        gtag('js', new Date());
 
-        gtag('config', {TRACKING_ID});
-      </script> */}
 
       <MosqueBrandingCSS data={this.state} />
       <Navigation data={this.state} onRouteChange={this.onRouteChange} showBanner = {this.state.showBanner} />
