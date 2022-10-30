@@ -44,7 +44,7 @@ content_sections:
 
         On November 7th 2022, we will be having another awesome event
 
-    - title: Frequent events
+    - title: Recurring events
       image: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/dhikr.png
       
       body: |
@@ -58,7 +58,7 @@ content_sections:
         **Eid Fitr celebration**
 
         **Date:** May 1st 2022
-        
+
         We had a great event on this day
 
 branding:
