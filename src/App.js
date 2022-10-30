@@ -14,6 +14,7 @@ import Team from './components/Team'
 import mosques from './data/mosques.json'
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
+import GoogleAnalytics from './components/GoogleAnalytics';
 // const TRACKING_ID = process.env.REACT_APP_GOOGLE_MEASUREMENT_ID ? process.env.REACT_APP_GOOGLE_MEASUREMENT_ID : 'G-GCS07570PB' // OUR_TRACKING_ID
 const TRACKING_ID = 'G-GCS07570PB' // OUR_TRACKING_ID
 
@@ -47,6 +48,7 @@ class App extends Component {
       <div className="App">
       <Helmet>
         <title>{this.state.name} - Mosque Website</title>
+        <GoogleAnalytics />
       </Helmet>
 
 
