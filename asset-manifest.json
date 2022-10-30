@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/highpoint-masjid/static/css/main.54f1fd80.css",
-    "main.js": "/highpoint-masjid/static/js/main.db77d3d0.js",
+    "main.js": "/highpoint-masjid/static/js/main.68ba926d.js",
     "static/js/787.8d494b67.chunk.js": "/highpoint-masjid/static/js/787.8d494b67.chunk.js",
     "index.html": "/highpoint-masjid/index.html",
     "main.54f1fd80.css.map": "/highpoint-masjid/static/css/main.54f1fd80.css.map",
-    "main.db77d3d0.js.map": "/highpoint-masjid/static/js/main.db77d3d0.js.map",
+    "main.68ba926d.js.map": "/highpoint-masjid/static/js/main.68ba926d.js.map",
     "787.8d494b67.chunk.js.map": "/highpoint-masjid/static/js/787.8d494b67.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54f1fd80.css",
-    "static/js/main.db77d3d0.js"
+    "static/js/main.68ba926d.js"
   ]
 }
