@@ -32,7 +32,7 @@
     ]
   },
   "branding": {
-    "logo_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/logo512.png",
+    "logo_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/favicon.jpg",
     "banner_image_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/heropic.png",
     "primary_color": "#913149",
     "larger_logo": true
