@@ -4,6 +4,8 @@ import { Component } from "react";
 import HeroBanner  from './HeroBanner'
 import HeroText from './HeroText'
 import OtherBanners from './OtherBanners'
+import ReactGA from "react-ga";
+// import useAnalyticsEventTracker from "./GoogleAnalytics";
 
 
 
@@ -17,9 +19,17 @@ class  Navigation extends Component {
     // const [navbar, setNavbar] = useState(false);
     // this.onRouteChange = this.props.onRouteChange
   }
+
+  useAnalyticsEventTracker = (category="Blog category") => {
+    const eventTracker = (action = "test action", label = "test label") => {
+      ReactGA.event({category, action, label});
+    }
+    return eventTracker;
+  }
   
     
   render() {
+    const gaEventTracker = this.useAnalyticsEventTracker('navigate');
     return (
       // https://larainfo.com/blogs/react-responsive-navbar-menu-with-tailwind-css-example
     <div> 
@@ -67,8 +77,9 @@ class  Navigation extends Component {
 
                       {this.state.pages.map((item) => (
 
-                    <li className="text-xl text-black-1400 hover:text-red-900 hover:text-italics">
-                    <p key={item.name}  onClick={() => {
+                    <li className="text-xl text-black-1400 hover:text-red-900 hover:text-italics" key={item.href}>
+                    <p   onClick={() => {
+                      gaEventTracker(item.name)
                       this.props.onRouteChange(item.href)
                       item.href === '/home'
                       ? this.setState({showBanner:true})

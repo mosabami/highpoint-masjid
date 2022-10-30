@@ -1,19 +1,25 @@
 // import './App.css';
 // import "./styles/globals.css"
 // import Head from 'next/head'
+
 import { Helmet } from 'react-helmet';
 import About from './components/About'
 import Contact from './components/Contact'
 import ContentSection from './components/ContentSection'
 import DonationSection from './components/DonationSection'
-import GoogleAnalytics from './components/GoogleAnalytics'
 import Navigation from './components/Navigation'
 import MosqueBrandingCSS from './components/MoqueBrandingCSS'
 import PrayerTimes from './components/PrayerTimes'
 import Team from './components/Team'
 import mosques from './data/mosques.json'
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
+const TRACKING_ID = process.env.REACT_APP_GOOGLE_MEASUREMENT_ID ? process.env.REACT_APP_GOOGLE_MEASUREMENT_ID : false // OUR_TRACKING_ID
 
+if (TRACKING_ID) {
+  ReactGA.initialize(TRACKING_ID)
+}
+else {console.log('no tracking')}
 
 class App extends Component {
   constructor() {
@@ -40,7 +46,6 @@ class App extends Component {
       <div className="App">
       <Helmet>
         <title>{this.state.name} - Mosque Website</title>
-        <GoogleAnalytics />
       </Helmet>
 
       <MosqueBrandingCSS data={this.state} />
